@@ -1,6 +1,6 @@
 function [estimate_final,b_out] = Kalman(b, measurement_associate, estimate_prev)
 persistent A H P a
-
+  
 for l = 1:numel(estimate_prev(1,:))
   if(estimate_prev(5,l) == measurement_associate(10,1))
     estimate = estimate_prev(:,l);
